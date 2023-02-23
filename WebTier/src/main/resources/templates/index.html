@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Image Recognition Application - CC21</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>	
+<script>
+$(document).ready(function(){
+	$('#submit').click(function() {
+		$('#img').show();
+	});
+});
+</script>
+<style>
+h1 {text-align: center;}
+h2 {text-align: center;}
+form {text-align: center;}
+</style>
+</head>
+<body>
+<h1>Image Recognition as a Service</h1>
+<h2>Upload Your Image and get the Results!!!!!</h2>
+
+<form th:action="@{/upload}" th:object="${images}" method="get">
+<br /> <br /> <input id="submit" type="submit" tabindex="5"
+			value="Upload Image Here">
+			</form>
+</body>
+</html>
